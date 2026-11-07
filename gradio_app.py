@@ -354,7 +354,7 @@ def generate_podcast(script, speaker1_name, ref_audio1, ref_text1, speaker2_name
             continue  # Skip if the speaker is neither speaker1 nor speaker2
         
         # Generate audio for this block
-        audio, _ = infer(ref_audio, ref_text, text, exp_name, remove_silence)
+        audio, _ = infer(ref_audio, ref_text, text, exp_name, remove_silence, custom_split_words="")
         
         # Convert the generated audio to a numpy array
         sr, audio_data = audio
